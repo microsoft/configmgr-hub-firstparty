@@ -1,0 +1,1 @@
+# configmgr-hub-firstparty
