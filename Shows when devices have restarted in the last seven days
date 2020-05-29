@@ -1,0 +1,1 @@
+OperatingSystem | where LastBootUpTime <= ago(7d) | summarize count() by bin(LastBootUpTime,1d) | render timechart
