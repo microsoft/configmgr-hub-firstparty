@@ -1,0 +1,1 @@
+Service | where (Name == 'CCMExec') | summarize count() by Device
