@@ -1,0 +1,1 @@
+CCMRecentlyUsedApplications | summarize dcount( Device ) by ProductName | top 10 by dcount_ | render barchart
