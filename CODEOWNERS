@@ -1,2 +1,3 @@
-# For now, all pull requests to the first party repo require signoff from someone on the hub team.
+# All pull requests to the first party repo require signoff from someone on the ConfigMgr or ConfigMgr-Hub teams.
 * @microsoft/ConfigMgr-Hub
+* @microsoft/ConfigMgr
