@@ -1,0 +1,1 @@
+OperatingSystem | summarize count() by Caption | render piechart
