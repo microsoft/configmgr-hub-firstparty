@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AppMgmtDigest xmlns="http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Application AuthoringScopeId="ScopeId_DF75E4D1-8EF8-43D9-8C1B-FC3331C3ECDB" LogicalName="Application_d52aa8b0-a5e2-4a48-9069-685f3de9862a" Version="5">
+    <DisplayInfo DefaultLanguage="en-US">
+      <Info Language="en-US">
+        <Title>System Center Updates Publisher</Title>
+        <Publisher>Microsoft</Publisher>
+        <Version>6.0.394.0</Version>
+        <ReleaseDate>11/4/2019</ReleaseDate>
+      </Info>
+    </DisplayInfo>
+    <Title ResourceId="Res_1100085203">System Center Updates Publisher</Title>
+    <Description ResourceId="Res_1465954039" />
+    <Publisher ResourceId="Res_181232195">Microsoft</Publisher>
+    <SoftwareVersion ResourceId="Res_539332890">6.0.394.0</SoftwareVersion>
+    <ReleaseDate ResourceId="Res_1254858301">11/4/2019</ReleaseDate>
+    <CustomId ResourceId="Res_1671639166" />
+  </Application>
+</AppMgmtDigest>
