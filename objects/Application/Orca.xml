@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AppMgmtDigest xmlns="http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Application AuthoringScopeId="ScopeId_5856851F-4808-4F8F-88E0-82BD56CA104A" LogicalName="Application_c86a81bf-172c-4fa9-a2fe-a22f0d42a0f5" Version="3">
+    <DisplayInfo DefaultLanguage="en-US">
+      <Info Language="en-US">
+        <Title>Orca</Title>
+      </Info>
+    </DisplayInfo>
+    <DeploymentTypes>
+      <DeploymentType AuthoringScopeId="ScopeId_5856851F-4808-4F8F-88E0-82BD56CA104A" LogicalName="DeploymentType_d0e1fa4c-c22e-4238-9f7f-17cd68e1498f" Version="1" />
+      <DeploymentType AuthoringScopeId="ScopeId_A628EFC0-DAD9-4292-847C-D4F846FF6EC3" LogicalName="DeploymentType_73eb216c-9534-4f2a-9ec2-ba67000ffc9c" Version="1" />
+      <DeploymentType AuthoringScopeId="ScopeId_A628EFC0-DAD9-4292-847C-D4F846FF6EC3" LogicalName="DeploymentType_40dba87a-04c3-4073-b44a-8d2ddcb6448c" Version="1" />
+    </DeploymentTypes>
+    <Title ResourceId="Res_11055593">Orca</Title>
+    <Owners>
+      <User Qualifier="LogonName" Id="test" />
+    </Owners>
+    <Contacts>
+      <User Qualifier="LogonName" Id="test" />
+    </Contacts>
+  </Application>
+  <DeploymentType AuthoringScopeId="ScopeId_5856851F-4808-4F8F-88E0-82BD56CA104A" LogicalName="DeploymentType_d0e1fa4c-c22e-4238-9f7f-17cd68e1498f" Version="1">
+    <Title ResourceId="Res_1600585401">Orca - Windows Installer (*.msi file)</Title>
+    <DeploymentTechnology>GLOBAL/MSIDeploymentTechnology</DeploymentTechnology>
+    <Technology>MSI</Technology>
+    <Hosting>Native</Hosting>
+    <Installer Technology="MSI">
+      <ExecutionContext>System</ExecutionContext>
+      <Contents>
+        <Content ContentId="Content_02f9f16d-810c-40cc-a321-e89109d57523" Version="1">
+          <File Name="AccessShare.bat" Size="1454" />
+          <File Name="ccmclean.exe" Size="393216" />
+          <File Name="CcmTools.msi" Size="1011712" />
+          <File Name="clispy.exe" Size="457216" />
+          <File Name="CMTrace.exe" Size="742288" />
+          <File Name="Orca.Msi" Size="2479104" />
+          <File Name="PinToBar.vbs" Size="2181" />
+          <File Name="policyclean.exe" Size="182784" />
+          <File Name="policyspy.exe" Size="760832" />
+          <Location>\\R61327789\CCMTools\</Location>
+          <PeerCache>true</PeerCache>
+          <OnFastNetwork>Download</OnFastNetwork>
+          <OnSlowNetwork>DoNothing</OnSlowNetwork>
+        </Content>
+      </Contents>
+      <DetectAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="ProductCode" Type="String">{6F7CB29F-1319-4816-B345-0856916EB801}</Arg>
+          <Arg Name="PackageCode" Type="String" />
+          <Arg Name="PatchCodes" Type="String[]" />
+        </Args>
+      </DetectAction>
+      <InstallAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="InstallCommandLine" Type="String">msiexec /i "Orca.Msi" /q</Arg>
+          <Arg Name="WorkingDirectory" Type="String" />
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="RequiresLogOn" Type="String" />
+          <Arg Name="RequiresElevatedRights" Type="Boolean">false</Arg>
+          <Arg Name="RequiresUserInteraction" Type="Boolean">false</Arg>
+          <Arg Name="RequiresReboot" Type="Boolean">false</Arg>
+          <Arg Name="UserInteractionMode" Type="String">Hidden</Arg>
+          <Arg Name="PostInstallBehavior" Type="String">BasedOnExitCode</Arg>
+          <Arg Name="ExecuteTime" Type="Int32">0</Arg>
+          <Arg Name="MaxExecuteTime" Type="Int32">120</Arg>
+          <Arg Name="RunAs32Bit" Type="Boolean">false</Arg>
+          <Arg Name="SuccessExitCodes" Type="Int32[]">
+            <Item>0</Item>
+            <Item>1707</Item>
+          </Arg>
+          <Arg Name="RebootExitCodes" Type="Int32[]">
+            <Item>3010</Item>
+          </Arg>
+          <Arg Name="HardRebootExitCodes" Type="Int32[]">
+            <Item>1641</Item>
+          </Arg>
+          <Arg Name="FastRetryExitCodes" Type="Int32[]">
+            <Item>1618</Item>
+          </Arg>
+        </Args>
+        <Contents>
+          <Content ContentId="Content_02f9f16d-810c-40cc-a321-e89109d57523" Version="1" />
+        </Contents>
+      </InstallAction>
+      <UninstallAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="InstallCommandLine" Type="String">msiexec /x {6F7CB29F-1319-4816-B345-0856916EB801} /q</Arg>
+          <Arg Name="WorkingDirectory" Type="String" />
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="RequiresLogOn" Type="String" />
+          <Arg Name="RequiresElevatedRights" Type="Boolean">false</Arg>
+          <Arg Name="RequiresUserInteraction" Type="Boolean">false</Arg>
+          <Arg Name="RequiresReboot" Type="Boolean">false</Arg>
+          <Arg Name="UserInteractionMode" Type="String">Hidden</Arg>
+          <Arg Name="PostInstallBehavior" Type="String">BasedOnExitCode</Arg>
+          <Arg Name="ExecuteTime" Type="Int32">0</Arg>
+          <Arg Name="MaxExecuteTime" Type="Int32">120</Arg>
+          <Arg Name="RunAs32Bit" Type="Boolean">false</Arg>
+          <Arg Name="SuccessExitCodes" Type="Int32[]">
+            <Item>0</Item>
+            <Item>1707</Item>
+          </Arg>
+          <Arg Name="RebootExitCodes" Type="Int32[]">
+            <Item>3010</Item>
+          </Arg>
+          <Arg Name="HardRebootExitCodes" Type="Int32[]">
+            <Item>1641</Item>
+          </Arg>
+          <Arg Name="FastRetryExitCodes" Type="Int32[]">
+            <Item>1618</Item>
+          </Arg>
+        </Args>
+        <Contents>
+          <Content ContentId="Content_02f9f16d-810c-40cc-a321-e89109d57523" Version="1" />
+        </Contents>
+      </UninstallAction>
+      <CustomData>
+        <DetectionMethod>ProductCode</DetectionMethod>
+        <ProductCode>{6F7CB29F-1319-4816-B345-0856916EB801}</ProductCode>
+        <ProductVersion>1.50.3698.0000</ProductVersion>
+        <InstallCommandLine>msiexec /i "Orca.Msi" /q</InstallCommandLine>
+        <InstallContent ContentId="Content_02f9f16d-810c-40cc-a321-e89109d57523" Version="1" />
+        <UninstallSetting>SameAsInstall</UninstallSetting>
+        <UninstallCommandLine>msiexec /x {6F7CB29F-1319-4816-B345-0856916EB801} /q</UninstallCommandLine>
+        <ExitCodes>
+          <ExitCode Code="0" Class="Success" />
+          <ExitCode Code="1707" Class="Success" />
+          <ExitCode Code="3010" Class="SoftReboot" />
+          <ExitCode Code="1641" Class="HardReboot" />
+          <ExitCode Code="1618" Class="FastRetry" />
+        </ExitCodes>
+        <UserInteractionMode>Hidden</UserInteractionMode>
+        <UserInstall>true</UserInstall>
+        <ContainsSystemFolders>true</ContainsSystemFolders>
+      </CustomData>
+    </Installer>
+  </DeploymentType>
+  <DeploymentType AuthoringScopeId="ScopeId_A628EFC0-DAD9-4292-847C-D4F846FF6EC3" LogicalName="DeploymentType_73eb216c-9534-4f2a-9ec2-ba67000ffc9c" Version="1">
+    <Title ResourceId="Res_1557677620">CCM Framework Tools - Windows Installer (*.msi file)</Title>
+    <DeploymentTechnology>GLOBAL/MSIDeploymentTechnology</DeploymentTechnology>
+    <Technology>MSI</Technology>
+    <Hosting>Native</Hosting>
+    <Installer Technology="MSI">
+      <ExecutionContext>System</ExecutionContext>
+      <Contents>
+        <Content ContentId="Content_25ee04c6-5c88-45ca-85bf-ea5ca17fef8d" Version="1">
+          <File Name="AccessShare.bat" Size="1454" />
+          <File Name="ccmclean.exe" Size="393216" />
+          <File Name="CcmTools.msi" Size="1011712" />
+          <File Name="clispy.exe" Size="457216" />
+          <File Name="CMTrace.exe" Size="742288" />
+          <File Name="Orca.Msi" Size="2479104" />
+          <File Name="PinToBar.vbs" Size="2181" />
+          <File Name="policyclean.exe" Size="182784" />
+          <File Name="policyspy.exe" Size="760832" />
+          <Location>\\R61327781\tools\CCMTools</Location>
+          <PeerCache>true</PeerCache>
+          <OnFastNetwork>Download</OnFastNetwork>
+          <OnSlowNetwork>DoNothing</OnSlowNetwork>
+        </Content>
+      </Contents>
+      <DetectAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="ProductCode" Type="String">{85DC3A5E-DECF-42E1-99D5-5DE89E852DAC}</Arg>
+          <Arg Name="PackageCode" Type="String">{CB755110-CDE5-463E-AF2B-8ED4EBA5607D}</Arg>
+          <Arg Name="PatchCodes" Type="String[]" />
+        </Args>
+      </DetectAction>
+      <InstallAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="InstallCommandLine" Type="String">msiexec /i "CcmTools.msi" /q</Arg>
+          <Arg Name="WorkingDirectory" Type="String" />
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="RequiresLogOn" Type="String" />
+          <Arg Name="RequiresElevatedRights" Type="Boolean">false</Arg>
+          <Arg Name="RequiresUserInteraction" Type="Boolean">false</Arg>
+          <Arg Name="RequiresReboot" Type="Boolean">false</Arg>
+          <Arg Name="UserInteractionMode" Type="String">Hidden</Arg>
+          <Arg Name="PostInstallBehavior" Type="String">BasedOnExitCode</Arg>
+          <Arg Name="ExecuteTime" Type="Int32">0</Arg>
+          <Arg Name="MaxExecuteTime" Type="Int32">120</Arg>
+          <Arg Name="RunAs32Bit" Type="Boolean">false</Arg>
+          <Arg Name="SuccessExitCodes" Type="Int32[]">
+            <Item>0</Item>
+            <Item>1707</Item>
+          </Arg>
+          <Arg Name="RebootExitCodes" Type="Int32[]">
+            <Item>3010</Item>
+          </Arg>
+          <Arg Name="HardRebootExitCodes" Type="Int32[]">
+            <Item>1641</Item>
+          </Arg>
+          <Arg Name="FastRetryExitCodes" Type="Int32[]">
+            <Item>1618</Item>
+          </Arg>
+        </Args>
+        <Contents>
+          <Content ContentId="Content_25ee04c6-5c88-45ca-85bf-ea5ca17fef8d" Version="1" />
+        </Contents>
+      </InstallAction>
+      <UninstallAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="InstallCommandLine" Type="String">msiexec /x {85DC3A5E-DECF-42E1-99D5-5DE89E852DAC} /q</Arg>
+          <Arg Name="WorkingDirectory" Type="String" />
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="RequiresLogOn" Type="String" />
+          <Arg Name="RequiresElevatedRights" Type="Boolean">false</Arg>
+          <Arg Name="RequiresUserInteraction" Type="Boolean">false</Arg>
+          <Arg Name="RequiresReboot" Type="Boolean">false</Arg>
+          <Arg Name="UserInteractionMode" Type="String">Hidden</Arg>
+          <Arg Name="PostInstallBehavior" Type="String">BasedOnExitCode</Arg>
+          <Arg Name="ExecuteTime" Type="Int32">0</Arg>
+          <Arg Name="MaxExecuteTime" Type="Int32">120</Arg>
+          <Arg Name="RunAs32Bit" Type="Boolean">false</Arg>
+          <Arg Name="SuccessExitCodes" Type="Int32[]">
+            <Item>0</Item>
+            <Item>1707</Item>
+          </Arg>
+          <Arg Name="RebootExitCodes" Type="Int32[]">
+            <Item>3010</Item>
+          </Arg>
+          <Arg Name="HardRebootExitCodes" Type="Int32[]">
+            <Item>1641</Item>
+          </Arg>
+          <Arg Name="FastRetryExitCodes" Type="Int32[]">
+            <Item>1618</Item>
+          </Arg>
+        </Args>
+        <Contents>
+          <Content ContentId="Content_25ee04c6-5c88-45ca-85bf-ea5ca17fef8d" Version="1" />
+        </Contents>
+      </UninstallAction>
+      <CustomData>
+        <DetectionMethod>ProductCode</DetectionMethod>
+        <ProductCode>{85DC3A5E-DECF-42E1-99D5-5DE89E852DAC}</ProductCode>
+        <ProductVersion>5.00.0</ProductVersion>
+        <PackageCode>{CB755110-CDE5-463E-AF2B-8ED4EBA5607D}</PackageCode>
+        <InstallCommandLine>msiexec /i "CcmTools.msi" /q</InstallCommandLine>
+        <InstallContent ContentId="Content_25ee04c6-5c88-45ca-85bf-ea5ca17fef8d" Version="1" />
+        <UninstallSetting>SameAsInstall</UninstallSetting>
+        <UninstallCommandLine>msiexec /x {85DC3A5E-DECF-42E1-99D5-5DE89E852DAC} /q</UninstallCommandLine>
+        <ExitCodes>
+          <ExitCode Code="0" Class="Success" />
+          <ExitCode Code="1707" Class="Success" />
+          <ExitCode Code="3010" Class="SoftReboot" />
+          <ExitCode Code="1641" Class="HardReboot" />
+          <ExitCode Code="1618" Class="FastRetry" />
+        </ExitCodes>
+        <UserInteractionMode>Hidden</UserInteractionMode>
+        <UserInstall>true</UserInstall>
+      </CustomData>
+    </Installer>
+  </DeploymentType>
+  <DeploymentType AuthoringScopeId="ScopeId_A628EFC0-DAD9-4292-847C-D4F846FF6EC3" LogicalName="DeploymentType_40dba87a-04c3-4073-b44a-8d2ddcb6448c" Version="1">
+    <Title ResourceId="Res_1054923434">7Zip - Windows Installer (*.msi file)</Title>
+    <Description ResourceId="Res_1373014784" />
+    <DeploymentTechnology>GLOBAL/MSIDeploymentTechnology</DeploymentTechnology>
+    <Technology>MSI</Technology>
+    <Hosting>Native</Hosting>
+    <Installer Technology="MSI">
+      <ExecutionContext>System</ExecutionContext>
+      <Contents>
+        <Content ContentId="Content_21abbcac-ff26-4778-a745-5aa88021c502" Version="1">
+          <File Name="7Zip.msi" Size="565248" />
+          <File Name="AccessShare.bat" Size="1454" />
+          <File Name="ccmclean.exe" Size="393216" />
+          <File Name="CcmTools.msi" Size="1011712" />
+          <File Name="clispy.exe" Size="457216" />
+          <File Name="CMTrace.exe" Size="742288" />
+          <File Name="Orca.Msi" Size="2479104" />
+          <File Name="PinToBar.vbs" Size="2181" />
+          <File Name="policyclean.msi" Size="182784" />
+          <File Name="policyspy.exe" Size="760832" />
+          <Location>\\R61327781\tools\CCMTools</Location>
+          <PeerCache>true</PeerCache>
+          <OnFastNetwork>Download</OnFastNetwork>
+          <OnSlowNetwork>DoNothing</OnSlowNetwork>
+        </Content>
+      </Contents>
+      <DetectAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="ProductCode" Type="String">{42D0178E-1E77-436D-A1F1-8C3BDA5CD110}</Arg>
+          <Arg Name="PackageCode" Type="String" />
+          <Arg Name="PatchCodes" Type="String[]" />
+        </Args>
+      </DetectAction>
+      <InstallAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="InstallCommandLine" Type="String">msiexec /i "7Zip.msi" /q</Arg>
+          <Arg Name="WorkingDirectory" Type="String" />
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="RequiresLogOn" Type="String" />
+          <Arg Name="RequiresElevatedRights" Type="Boolean">false</Arg>
+          <Arg Name="RequiresUserInteraction" Type="Boolean">false</Arg>
+          <Arg Name="RequiresReboot" Type="Boolean">false</Arg>
+          <Arg Name="UserInteractionMode" Type="String">Hidden</Arg>
+          <Arg Name="PostInstallBehavior" Type="String">BasedOnExitCode</Arg>
+          <Arg Name="ExecuteTime" Type="Int32">0</Arg>
+          <Arg Name="MaxExecuteTime" Type="Int32">120</Arg>
+          <Arg Name="RunAs32Bit" Type="Boolean">false</Arg>
+          <Arg Name="SuccessExitCodes" Type="Int32[]">
+            <Item>0</Item>
+            <Item>1707</Item>
+          </Arg>
+          <Arg Name="RebootExitCodes" Type="Int32[]">
+            <Item>3010</Item>
+          </Arg>
+          <Arg Name="HardRebootExitCodes" Type="Int32[]">
+            <Item>1641</Item>
+          </Arg>
+          <Arg Name="FastRetryExitCodes" Type="Int32[]">
+            <Item>1618</Item>
+          </Arg>
+        </Args>
+        <Contents>
+          <Content ContentId="Content_21abbcac-ff26-4778-a745-5aa88021c502" Version="1" />
+        </Contents>
+      </InstallAction>
+      <UninstallAction>
+        <Provider>MSI</Provider>
+        <Args>
+          <Arg Name="InstallCommandLine" Type="String">msiexec /x {42D0178E-1E77-436D-A1F1-8C3BDA5CD110} /q</Arg>
+          <Arg Name="WorkingDirectory" Type="String" />
+          <Arg Name="ExecutionContext" Type="String">System</Arg>
+          <Arg Name="RequiresLogOn" Type="String" />
+          <Arg Name="RequiresElevatedRights" Type="Boolean">false</Arg>
+          <Arg Name="RequiresUserInteraction" Type="Boolean">false</Arg>
+          <Arg Name="RequiresReboot" Type="Boolean">false</Arg>
+          <Arg Name="UserInteractionMode" Type="String">Hidden</Arg>
+          <Arg Name="PostInstallBehavior" Type="String">BasedOnExitCode</Arg>
+          <Arg Name="ExecuteTime" Type="Int32">0</Arg>
+          <Arg Name="MaxExecuteTime" Type="Int32">120</Arg>
+          <Arg Name="RunAs32Bit" Type="Boolean">false</Arg>
+          <Arg Name="SuccessExitCodes" Type="Int32[]">
+            <Item>0</Item>
+            <Item>1707</Item>
+          </Arg>
+          <Arg Name="RebootExitCodes" Type="Int32[]">
+            <Item>3010</Item>
+          </Arg>
+          <Arg Name="HardRebootExitCodes" Type="Int32[]">
+            <Item>1641</Item>
+          </Arg>
+          <Arg Name="FastRetryExitCodes" Type="Int32[]">
+            <Item>1618</Item>
+          </Arg>
+        </Args>
+        <Contents>
+          <Content ContentId="Content_21abbcac-ff26-4778-a745-5aa88021c502" Version="1" />
+        </Contents>
+      </UninstallAction>
+      <CustomData>
+        <DetectionMethod>ProductCode</DetectionMethod>
+        <ProductCode>{42D0178E-1E77-436D-A1F1-8C3BDA5CD110}</ProductCode>
+        <ProductVersion>1.0</ProductVersion>
+        <InstallCommandLine>msiexec /i "7Zip.msi" /q</InstallCommandLine>
+        <InstallContent ContentId="Content_21abbcac-ff26-4778-a745-5aa88021c502" Version="1" />
+        <UninstallSetting>SameAsInstall</UninstallSetting>
+        <UninstallCommandLine>msiexec /x {42D0178E-1E77-436D-A1F1-8C3BDA5CD110} /q</UninstallCommandLine>
+        <ExitCodes>
+          <ExitCode Code="0" Class="Success" />
+          <ExitCode Code="1707" Class="Success" />
+          <ExitCode Code="3010" Class="SoftReboot" />
+          <ExitCode Code="1641" Class="HardReboot" />
+          <ExitCode Code="1618" Class="FastRetry" />
+        </ExitCodes>
+        <UserInteractionMode>Hidden</UserInteractionMode>
+        <UserInstall>true</UserInstall>
+        <ContainsSystemRegistryKeys>true</ContainsSystemRegistryKeys>
+      </CustomData>
+    </Installer>
+  </DeploymentType>
+</AppMgmtDigest>
