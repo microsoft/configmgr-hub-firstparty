@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-16"?>
+<DesiredConfigurationDigest xmlns="http://schemas.microsoft.com/SystemsCenterConfigurationManager/2009/07/10/DesiredConfiguration">
+  <!--Authored against the following schema version: 5-->
+  <Baseline AuthoringScopeId="ScopeId_DE9C47AA-BDE5-4427-B423-C33D8E8801E2" LogicalName="Baseline_9d662b00-ca0f-46d8-be95-3f889f8f3db0" Version="4">
+    <Annotation xmlns="http://schemas.microsoft.com/SystemsCenterConfigurationManager/2009/06/14/Rules">
+      <DisplayName Text="Speculative Execution Side-Channel Vulnerabilities" ResourceId="ID-59237d4c-fd03-4d30-853a-6ec3f643a0d6" />
+      <Description Text="" />
+    </Annotation>
+    <RequiredItems>
+      <ApplicationReference AuthoringScopeId="ScopeId_DE9C47AA-BDE5-4427-B423-C33D8E8801E2" LogicalName="Application_c243d45f-4874-4fe0-8712-e705ee8d708a" />
+      <ApplicationReference AuthoringScopeId="ScopeId_DE9C47AA-BDE5-4427-B423-C33D8E8801E2" LogicalName="Application_7c304453-c2d5-4862-9dce-c2ddb1a9a036" />
+      <ApplicationReference AuthoringScopeId="ScopeId_667E89B3-A6E0-467F-94FE-B3505E8DD62C" LogicalName="Application_7a6a427f-af17-49fe-ac01-473b75feb39c" />
+      <ApplicationReference AuthoringScopeId="ScopeId_667E89B3-A6E0-467F-94FE-B3505E8DD62C" LogicalName="Application_53c47cd5-85bc-45e6-a91c-705a8caa60e5" />
+      <ApplicationReference AuthoringScopeId="ScopeId_C4078E4E-1F3D-407A-84CF-BDE12669BF86" LogicalName="Application_51c7c841-b844-4ccd-af2a-341f338a3fc0" />
+    </RequiredItems>
+    <ProhibitedItems />
+    <OptionalItems />
+    <OperatingSystems />
+    <SoftwareUpdates />
+    <Baselines />
+    <OtherConfigurationItems />
+  </Baseline>
+</DesiredConfigurationDigest>
