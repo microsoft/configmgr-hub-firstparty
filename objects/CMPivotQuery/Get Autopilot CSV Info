@@ -1,0 +1,7 @@
+// Create an empty CSV file
+// Add this CSV header (remove quotation marks): "Device Serial Number,Windows Product ID,Hardware Hash"
+// Copy / paste the content of a single CSVLine cell to the CSV file and upload it to Autopilot.
+
+Bios
+| project Device, SerialNumber
+| join (MDMDevDetail) | project Device, CSVLine=strcat(SerialNumber, ',,', DeviceHardwareData)
